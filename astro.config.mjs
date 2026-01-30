@@ -10,9 +10,12 @@ import remarkMath from "remark-math";
 
 import { defineConfig } from "astro/config";
 
+import { defineConfig } from "astro/config";
+
 export default defineConfig({
   output: "static",
-
+  base: "/",
+  trailingSlash: "ignore",
 
   prefetch: {
     prefetchAll: true,

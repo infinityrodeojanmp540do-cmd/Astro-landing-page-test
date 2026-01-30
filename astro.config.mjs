@@ -8,10 +8,11 @@ import remarkToc from "remark-toc";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 
+import { defineConfig } from "astro/config";
+
 export default defineConfig({
   output: "static",
-  base: "/",
-  trailingSlash: "ignore",
+
 
   prefetch: {
     prefetchAll: true,
@@ -57,4 +58,6 @@ export default defineConfig({
     },
     extendDefaultPlugins: true,
   },
+
+  adapter: cloudflare(),
 });
